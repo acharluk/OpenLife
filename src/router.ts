@@ -8,19 +8,28 @@ import NewGameView from './views/NewGameView.vue';
 const routes = [
   {
       path: '/',
+      name: 'main',
       component: MainView,
   },
   {
     path: '/new',
+    name: 'new-game',
     component: NewGameView,
   },
   {
     path: '/jobs',
+    name: 'job-list',
     component: () => import('@/views/JobListView.vue'),
   },
   {
     path: '/jobs/:id',
+    name: 'job-detail',
     component: () => import('@/views/JobDetailView.vue'),
+  },
+  {
+    path: '/death',
+    name: 'death',
+    component: () => import('@/views/DeathView.vue'),
   },
 ];
 
@@ -39,7 +48,7 @@ router.beforeEach((to, _, next) => {
   const lifeStore = useLifeStore();
 
   if (!lifeStore.hasLife() && to.path !== '/new') {
-    router.push('/new');
+    router.push({ name: 'new-game' });
   }
 
   next();

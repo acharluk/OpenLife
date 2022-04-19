@@ -25,6 +25,6 @@ let playerName = ref('');
 
 function beginGame() {
   lifeStore.beginGame(playerName.value);
-  router.push('/');
+  router.push({ name: 'main' });
 }
 </script>

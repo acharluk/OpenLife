@@ -17,6 +17,7 @@ const currentJob = jobs[jobId];
 
 function startJob() {
   lifeStore.job = currentJob;
-  router.push('/')
+  lifeStore.addEvent(`You started a new position as ${currentJob.title}!`);
+  router.push({ name: 'main' });
 }
 </script>

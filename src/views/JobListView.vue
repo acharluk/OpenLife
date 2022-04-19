@@ -5,7 +5,7 @@
       :key="job.id"
     >
       <p>{{ job.title }}, Salary: {{ job.salary }}</p>
-      <router-link :to="`/jobs/${job.id}`">More details</router-link>
+      <router-link :to="{ name: 'job-detail', params: { id: job.id } }">More details</router-link>
     </li>
   </ul>
 </template>
