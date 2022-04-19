@@ -18,11 +18,12 @@
 <script setup lang="ts">
 import { router } from '@/router';
 import { useLifeStore } from '@/store/life';
+import { ref } from 'vue';
 
 const lifeStore = useLifeStore();
-let playerName = '';
+let playerName = ref('');
 
-function beginGame() {
+function beginGame(){
   lifeStore.beginGame(this.playerName);
   router.push('/');
 }
