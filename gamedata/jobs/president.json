@@ -1,0 +1,6 @@
+{
+  "id": "president",
+  "title": "President",
+  "salary": 1000000,
+  "firedChance": 0.8
+}
