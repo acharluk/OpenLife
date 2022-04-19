@@ -23,7 +23,7 @@ export const useLifeStore = defineStore('life', {
     state: initialState,
     getters: {
       jobTitle(): string {
-        return this.job?.title || 'Unemployed'
+        return this.job?.title || 'Unemployed';
       },
     },
     actions: {

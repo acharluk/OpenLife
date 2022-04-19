@@ -4,7 +4,9 @@
   <h3>Balance: {{ balance }}</h3>
   <h3>Current job: {{ jobTitle }}</h3>
 
-  <button @click="lifeStore.advanceYear">Advance year</button>
+  <button @click="lifeStore.advanceYear">
+    Advance year
+  </button>
 
   <br>
 
