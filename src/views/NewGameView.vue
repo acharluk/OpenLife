@@ -23,8 +23,8 @@ import { ref } from 'vue';
 const lifeStore = useLifeStore();
 let playerName = ref('');
 
-function beginGame(){
-  lifeStore.beginGame(this.playerName);
+function beginGame() {
+  lifeStore.beginGame(playerName.value);
   router.push('/');
 }
 </script>
