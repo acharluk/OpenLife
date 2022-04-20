@@ -1,24 +1,10 @@
 <template>
-  <h3>My name is {{ name }}</h3>
-  <h3>Age: {{ age }}</h3>
-  <h3>Balance: {{ balance }}</h3>
-  <h3>Current job: {{ jobTitle }}</h3>
-
-  <button @click="lifeStore.advanceYear">
-    Advance year
-  </button>
-
-  <br>
-
-  <router-link :to="{ name: 'job-list' }">
-    Search for a job
-  </router-link>
-
-  <br>
-
-  <router-link :to="{ name: 'new-game' }">
-    New life
-  </router-link>
+  <ul class="flex items-center justify-between flex-wrap bg-teal-600 p-6 text-white">
+    <li class="mr-6">😊 {{ name }}</li>
+    <li class="mr-6">Age: {{ age }}</li>
+    <li class="mr-6">Balance: {{ balance }}</li>
+    <li class="mr-6">Current job: {{ jobTitle }}</li>
+  </ul>
 
   <div class="eventList">
     <p
@@ -28,6 +14,34 @@
       {{ event }}
     </p>
   </div>
+
+  <div class="flex justify-between my-3">
+    <button
+      class="flex-1 mr-2 inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white"
+      @click="lifeStore.advanceYear"
+    >
+      Advance year
+    </button>
+
+    <br>
+
+    <router-link
+      :to="{ name: 'job-list' }"
+      class="flex-1 mr-2 inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white text-center"
+    >
+      Search for a job
+    </router-link>
+
+    <br>
+  </div>
+
+  <router-link
+    :to="{ name: 'new-game' }"
+    class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 my-10 px-3"
+  >
+    New life
+  </router-link>
+
 </template>
 
 <script setup lang="ts">

@@ -17,4 +17,13 @@ export default defineConfig({
       },
     ],
   },
+  // css: {
+  //   preprocessorOptions: {
+  //     sass: {
+  //       additionalData: [
+  //         '@import "src/style/main.scss"'
+  //       ]
+  //     }
+  //   }
+  // }
 });
