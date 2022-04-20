@@ -13,5 +13,5 @@
 </template>
 
 <script setup lang="ts">
-import jobs from '@/game/jobs/allJobs';
+import jobs from '@/game/jobs';
 </script>

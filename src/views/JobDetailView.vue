@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import jobs from '@/game/jobs/allJobs';
+import jobs from '@/game/jobs';
 import { useLifeStore } from '@/store/life';
 import { useRouter } from 'vue-router';
 
