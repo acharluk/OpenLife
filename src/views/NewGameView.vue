@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center bg-gray-900 min-h-screen">
-    <h3 class="text-5xl font-bold text-center text-orange-100">OpenLife</h3>
+    <h3 class="text-5xl font-bold text-center text-orange-100 animate-bounce">OpenLife</h3>
     <form
       class="flex flex-col p-10 my-3"
       @submit.prevent="beginGame()"
@@ -31,10 +31,9 @@
 </template>
 
 <script setup lang="ts">
-import { router } from '@/router';
 import { useLifeStore } from '@/store/life';
-import { ref } from 'vue';
 
+const router = useRouter();
 const lifeStore = useLifeStore();
 let playerName = ref('');
 

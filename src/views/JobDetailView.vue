@@ -9,7 +9,6 @@
 <script setup lang="ts">
 import jobs from '@/game/jobs';
 import { useLifeStore } from '@/store/life';
-import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const jobId = useRouter().currentRoute.value.params.id as string;
