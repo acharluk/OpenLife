@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --base=/OpenLife/",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:gh": "vue-tsc --noEmit && vite build --base=/OpenLife/",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.vue",
     "lint:fix": "eslint . --ext .ts,.vue --fix",
